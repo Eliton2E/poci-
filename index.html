@@ -37,7 +37,7 @@
 <p>A capital da França é Paris.</p>
 </div>
 
-<article class="cartao">
+cartao.innerHTML = `
         <div class="cartao__conteudo">
                 <h3> Programação </h3>
                       <div class="cartao__conteudo__pergunta">
@@ -49,18 +49,19 @@
                         <div class="cartao__conteudo__resposta">
             <p>O CSS é uma linguagem de estilização.</p>
         </div>
-    </div>
-</article>
-<article class="cartao">
-    <div class="cartao__conteudo">
-        <h3>Programação 2.0</h3>
+      </div>
+`
+cartao.innerHTML = `
+        <div class="cartao__conteudo">
+        <h3>${categoria}</h3>
         <div class="cartao__conteudo__pergunta">
-            <p>0 que é JavaScript?</p>
+                <p>${pergunta}</p>
         </div>
         <div class="cartao__conteudo__resposta">
-            <p>0 JavaScript é uma linguagem de programação</p>
+                <p>${resposta}</p>
         </div>
-    </div>
+        </div>
+`
 </article>
 
          </article>
@@ -191,3 +192,4 @@ footer p{
 function criaCartao (categoria, pergunta, resposta) {
     console.log(categoria, pergunta, resposta)
 }
+container.appendChild(cartao)
